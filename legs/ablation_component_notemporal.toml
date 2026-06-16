@@ -1,0 +1,4 @@
+name = "ablation_notemporal"
+
+[model]
+use_temporal = false

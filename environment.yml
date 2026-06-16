@@ -1,0 +1,19 @@
+name: chronorisk
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch>=2.9
+  - numpy>=2.3
+  - scipy>=1.16
+  - scikit-learn>=1.7
+  - pip
+  - pip:
+      - plumbum>=2.0,<2.1
+      - mypy
+      - ruff
+      - black>=24.8,<24.9
+      - isort>=5.13,<5.14
+      - pytest>=9.0,<9.1
+      - pre-commit

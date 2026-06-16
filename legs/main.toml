@@ -1,0 +1,53 @@
+name = "main"
+
+[model]
+ehr_features = 32
+bio_channels = 3
+bio_window = 16
+dim = 256
+heads = 8
+layers = 4
+conv_kernels = [3, 5, 7]
+dropout = 0.1
+use_temporal = true
+use_fusion = true
+use_rl = true
+use_recalibration = true
+
+[data]
+horizon = 6
+n_train = 39001
+n_val = 5572
+n_test = 11142
+temporal_window = 0
+dataset = "nscisc"
+seed = 42
+
+[reward]
+w_pred = 0.3
+w_trans = 0.2
+w_cal = 0.2
+w_safe = 0.3
+under_triage_lambda = 2.0
+cal_window = 50
+
+[rqs]
+lambda_cal = 0.5
+lambda_under = 1.0
+lambda_trans = 0.3
+
+[train]
+lr = 5e-4
+batch_size = 256
+epochs = 200
+patience = 20
+gamma = 0.99
+tau = 0.005
+cql_alpha = 0.1
+pretrain_epochs = 20
+mask_ratio = 0.15
+grad_clip = 1.0
+weight_decay = 0.0
+warmup = 0
+amp = false
+device = "cpu"

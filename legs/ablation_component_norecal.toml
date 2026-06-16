@@ -1,0 +1,7 @@
+name = "ablation_norecal"
+
+[model]
+use_recalibration = false
+
+[reward]
+w_trans = 0.0

@@ -1,0 +1,5 @@
+name = "supplementary_transfer"
+
+[data]
+dataset = "mimic-iv"
+seed = 101

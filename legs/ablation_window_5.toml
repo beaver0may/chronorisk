@@ -1,0 +1,4 @@
+name = "ablation_window_5"
+
+[data]
+temporal_window = 5

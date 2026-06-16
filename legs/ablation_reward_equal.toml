@@ -1,0 +1,7 @@
+name = "ablation_reward_equal"
+
+[reward]
+w_pred = 0.25
+w_trans = 0.25
+w_cal = 0.25
+w_safe = 0.25

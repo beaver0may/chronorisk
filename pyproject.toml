@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chronorisk"
+version = "0.1.0"
+description = "Offline conservative RL for temporal SCI chronic-disease risk-tier recalibration"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "torch>=2.9,<2.10",
+    "numpy>=2.3,<2.4",
+    "plumbum>=2.0,<2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "scikit-learn>=1.7,<1.8",
+    "scipy>=1.16,<1.17",
+    "pytest>=9.0,<9.1",
+    "ruff",
+    "black>=24.8,<24.9",
+    "isort>=5.13,<5.14",
+    "mypy",
+    "pre-commit",
+]
+
+[project.scripts]
+chronorisk = "chronorisk.bridge.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["chronorisk*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["chronorisk"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["chronorisk"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = false
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = ["torch.*", "numpy.*", "scipy.*", "sklearn.*", "plumbum.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

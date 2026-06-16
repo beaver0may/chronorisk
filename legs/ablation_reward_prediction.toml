@@ -1,0 +1,4 @@
+name = "ablation_reward_prediction"
+
+[reward]
+w_pred = 0.5

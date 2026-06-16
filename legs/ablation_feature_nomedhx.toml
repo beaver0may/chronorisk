@@ -1,0 +1,4 @@
+name = "ablation_feature_nomedhx"
+
+[data]
+dropped_channels = ["nomedhx"]

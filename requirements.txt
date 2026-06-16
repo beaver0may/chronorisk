@@ -1,0 +1,5 @@
+torch>=2.9,<2.10
+numpy>=2.3,<2.4
+plumbum>=2.0,<2.1
+scikit-learn>=1.7,<1.8
+scipy>=1.16,<1.17

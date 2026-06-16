@@ -1,0 +1,28 @@
+# for unit-test smoke only; do not use for reporting
+name = "smoke"
+
+[model]
+ehr_features = 12
+bio_channels = 2
+bio_window = 6
+dim = 16
+heads = 2
+layers = 2
+conv_kernels = [3, 5]
+dropout = 0.0
+
+[data]
+horizon = 5
+n_train = 32
+n_val = 16
+n_test = 16
+seed = 7
+
+[train]
+lr = 1e-3
+batch_size = 8
+epochs = 4
+patience = 10
+pretrain_epochs = 1
+mask_ratio = 0.15
+device = "cpu"

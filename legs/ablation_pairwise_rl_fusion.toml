@@ -1,0 +1,4 @@
+name = "ablation_pairwise_rl_fusion"
+
+[model]
+use_temporal = false

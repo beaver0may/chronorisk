@@ -1,0 +1,4 @@
+name = "ablation_alpha_000"
+
+[train]
+cql_alpha = 0.0

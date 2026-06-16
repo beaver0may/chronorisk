@@ -1,0 +1,4 @@
+name = "supplementary_scaling"
+
+[data]
+n_train = 500

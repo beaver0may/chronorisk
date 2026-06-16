@@ -1,0 +1,4 @@
+name = "ablation_supervised_composite"
+
+[model]
+use_rl = false

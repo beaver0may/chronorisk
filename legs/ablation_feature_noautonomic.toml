@@ -1,0 +1,4 @@
+name = "ablation_feature_noautonomic"
+
+[data]
+dropped_channels = ["noautonomic"]

@@ -1,0 +1,4 @@
+name = "ablation_feature_noscifeat"
+
+[data]
+dropped_channels = ["noscifeat"]

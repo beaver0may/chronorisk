@@ -1,0 +1,4 @@
+name = "ablation_reward_safety"
+
+[reward]
+w_safe = 0.5

@@ -1,0 +1,4 @@
+name = "ablation_nofusion"
+
+[model]
+use_fusion = false
